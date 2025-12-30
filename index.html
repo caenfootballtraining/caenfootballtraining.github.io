@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Caen Football Training | CFT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0b0b0b;color:#fff;scroll-behavior:smooth;}
+
+/* ===== MENU FIXE ===== */
+nav{position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,0.95);padding:15px 10%;display:flex;justify-content:space-between;align-items:center;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.5);}
+nav .logo{font-size:24px;font-weight:700;color:gold;letter-spacing:2px;}
+nav ul{list-style:none;display:flex;gap:30px;}
+nav ul li a{text-decoration:none;color:#fff;font-weight:500;transition:.3s;}
+nav ul li a:hover{color:gold;transform:scale(1.1);}
+
+/* ===== HERO ===== */
+.hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;overflow:hidden;}
+.hero video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;opacity:0.5;transform:translateZ(0);}
+.hero h1{font-size:64px;letter-spacing:4px;color:#fff;text-shadow:0 0 15px #000;animation:fadeDown 1.2s ease;}
+.hero h2{margin-top:10px;font-size:28px;letter-spacing:6px;opacity:.9;color:gold;animation:fadeUp 1.4s ease;}
+.hero p{margin-top:20px;font-size:18px;opacity:.85;color:#fff;animation:fadeUp 1.6s ease;}
+.btn{margin-top:30px;padding:15px 45px;border:2px solid gold;color:gold;text-decoration:none;font-weight:700;border-radius:50px;transition:.4s;animation:fadeUp 1.8s ease;}
+.btn:hover{background:gold;color:#000;transform:scale(1.05);}
+
+/* ===== RÉSEAUX SOCIAUX ===== */
+.socials{margin-top:20px;display:flex;gap:20px;}
+.socials a{color:#fff;font-size:22px;text-decoration:none;transition:.3s;}
+.socials a:hover{color:gold;transform:scale(1.3);}
+
+/* ===== SECTIONS ===== */
+section{padding:100px 10%;opacity:0;transform:translateY(60px);transition:1s ease;}
+section.active{opacity:1;transform:translateY(0);}
+.section-title{font-size:46px;margin-bottom:20px;color:gold;text-transform:uppercase;}
+.section-text{font-size:18px;line-height:1.8;opacity:.85;}
+
+/* ===== CARDS ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:40px;}
+.card{background:#121212;padding:30px;border-radius:25px;transition:.6s;overflow:hidden;position:relative;cursor:pointer;box-shadow:0 0 10px rgba(0,0,0,.3);}
+.card:hover{transform:translateY(-15px) scale(1.02);box-shadow:0 25px 50px rgba(255,215,0,.25);}
+.card img{width:100%;border-radius:50%;margin-bottom:15px;transition:.6s;box-shadow:0 0 15px rgba(255,215,0,.3);}
+.card:hover img{transform:scale(1.1) rotate(-1deg);box-shadow:0 0 30px gold;}
+.card h3{margin-bottom:10px;color:gold;letter-spacing:1px;transition:.4s;}
+.card p{opacity:.85;}
+
+/* ===== CONTACT ===== */
+.contact-form{display:flex;flex-direction:column;gap:15px;margin-top:20px;}
+.contact-form input,.contact-form textarea{padding:15px;border-radius:12px;border:none;font-size:16px;background:#1a1a1a;color:#fff;}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;box-shadow:0 0 10px gold;}
+.contact-form button{padding:15px;border-radius:50px;border:none;background:gold;color:#000;font-weight:700;cursor:pointer;transition:.3s;}
+.contact-form button:hover{background:#fff;color:#000;transform:scale(1.05);}
+
+/* ===== FOOTER ===== */
+footer{text-align:center;padding:40px;background:#000;opacity:.5;margin-top:50px;letter-spacing:1px;color:#fff;}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeDown{from{opacity:0;transform:translateY(-40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+
+<!-- MENU -->
+<nav>
+  <div class="logo">CFT</div>
+  <ul>
+    <li><a href="#hero">Accueil</a></li>
+    <li><a href="#perfectionnement">Séances</a></li>
+    <li><a href="#equipe">Équipe</a></li>
+    <li><a href="#actualites">Actualités</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <video src="video/hero.mp4" autoplay muted loop></video>
+  <h1>Caen Football Training</h1>
+  <h2>CFT</h2>
+  <p>Association de futsal & football — Formation • Discipline • Performance</p>
+  <a href="#perfectionnement" class="btn">Découvrir</a>
+  <div class="socials">
+    <a href="https://instagram.com/cft" target="_blank">Instagram</a>
+    <a href="https://tiktok.com/@cft" target="_blank">TikTok</a>
+    <a href="https://snapchat.com/add/cft" target="_blank">Snapchat</a>
+  </div>
+</div>
+
+<!-- SÉANCES -->
+<section id="perfectionnement">
+  <h2 class="section-title">Séances de perfectionnement</h2>
+  <p class="section-text">CFT propose des séances pour tous niveaux, encadrées par nos coachs professionnels.</p>
+  <div class="cards">
+    <div class="card"><h3>Niveau Débutant</h3><p>Techniques de base, travail collectif.</p></div>
+    <div class="card"><h3>Niveau Intermédiaire</h3><p>Perfectionnement technique et tactique.</p></div>
+    <div class="card"><h3>Niveau Avancé</h3><p>Approfondissement et préparation compétition.</p></div>
+  </div>
+</section>
+
+<!-- ÉQUIPE -->
+<section id="equipe">
+  <h2 class="section-title">Équipe & Coachs</h2>
+  <p class="section-text">Découvrez notre équipe de joueurs et nos coachs professionnels de CFT.</p>
+  <div class="cards">
+    <div class="card"><img src="img/coach1.jpg" alt="Coach 1"><h3>Jean Dupont</h3><p>Coach principal</p></div>
+    <div class="card"><img src="img/coach2.jpg" alt="Coach 2"><h3>Marc Leblanc</h3><p>Entraîneur technique</p></div>
+    <div class="card"><img src="img/joueur1.jpg" alt="Joueur 1"><h3>Joueur 1</h3><p>Capitaine</p></div>
+    <div class="card"><img src="img/joueur2.jpg" alt="Joueur 2"><h3>Joueur 2</h3><p>Milieu</p></div>
+  </div>
+</section>
+
+<!-- ACTUALITÉS -->
+<section id="actualites">
+  <h2 class="section-title">Actualités</h2>
+  <p class="section-text">Suivez les dernières actualités et événements de CFT.</p>
+  <div class="cards">
+    <div class="card"><h3>Match du week-end</h3><p>Résultats et résumé du match.</p></div>
+    <div class="card"><h3>Stage futsal</h3><p>Inscription ouverte pour notre stage d’été.</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <p class="section-text">Pour toutes questions ou inscriptions, contactez CFT directement.</p>
+  <form class="contact-form">
+    <input type="text" placeholder="Nom" required>
+    <input type="email" placeholder="Email" required>
+    <textarea rows="5" placeholder="Message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Caen Football Training — CFT
+</footer>
+
+<script>
+// ===== ANIMATIONS AU SCROLL =====
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('active');
+    }
+  });
+},{threshold:0.1});
+sections.forEach(section=>observer.observe(section));
+
+// ===== PARALLAX HERO =====
+const hero = document.querySelector('.hero');
+window.addEventListener('scroll', () => {
+  let offset = window.pageYOffset;
+  hero.style.transform = `translateY(${offset * 0.2}px)`;
+});
+</script>
+
+</body>
+</html>

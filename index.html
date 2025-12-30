@@ -18,7 +18,8 @@ nav ul li a:hover{color:gold;transform:scale(1.1);}
 
 /* ===== HERO ===== */
 .hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;overflow:hidden;}
-.hero video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;opacity:0.5;transform:translateZ(0);}
+.hero img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-2;}
+.hero div.overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:-1;}
 .hero h1{font-size:64px;letter-spacing:4px;color:#fff;text-shadow:0 0 15px #000;animation:fadeDown 1.2s ease;}
 .hero h2{margin-top:10px;font-size:28px;letter-spacing:6px;opacity:.9;color:gold;animation:fadeUp 1.4s ease;}
 .hero p{margin-top:20px;font-size:18px;opacity:.85;color:#fff;animation:fadeUp 1.6s ease;}
@@ -76,7 +77,8 @@ footer{text-align:center;padding:40px;background:#000;opacity:.5;margin-top:50px
 
 <!-- HERO -->
 <div class="hero" id="hero">
-  <video src="video/hero.mp4" autoplay muted loop></video>
+  <img src="img/hero.jpg" alt="Hero">
+  <div class="overlay"></div>
   <h1>Caen Football Training</h1>
   <h2>CFT</h2>
   <p>Association de futsal & football — Formation • Discipline • Performance</p>
@@ -150,11 +152,11 @@ const observer = new IntersectionObserver(entries=>{
 },{threshold:0.1});
 sections.forEach(section=>observer.observe(section));
 
-// ===== PARALLAX HERO =====
+// ===== PARALLAX HERO (légère) =====
 const hero = document.querySelector('.hero');
 window.addEventListener('scroll', () => {
   let offset = window.pageYOffset;
-  hero.style.transform = `translateY(${offset * 0.2}px)`;
+  hero.style.transform = `translateY(${offset * 0.1}px)`;
 });
 </script>
 

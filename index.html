@@ -10,48 +10,50 @@
 body{background:#0b0b0b;color:#fff;scroll-behavior:smooth;}
 
 /* ===== MENU FIXE ===== */
-nav{position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,0.9);padding:15px 10%;display:flex;justify-content:space-between;align-items:center;z-index:1000;}
-nav .logo{font-size:24px;font-weight:700;color:gold;}
+nav{position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,0.95);padding:15px 10%;display:flex;justify-content:space-between;align-items:center;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.5);}
+nav .logo{font-size:24px;font-weight:700;color:gold;letter-spacing:2px;}
 nav ul{list-style:none;display:flex;gap:30px;}
 nav ul li a{text-decoration:none;color:#fff;font-weight:500;transition:.3s;}
-nav ul li a:hover{color:gold;}
+nav ul li a:hover{color:gold;transform:scale(1.1);}
 
 /* ===== HERO ===== */
 .hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;overflow:hidden;}
-.hero video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;opacity:0.6;}
-.hero h1{font-size:64px;letter-spacing:4px;animation:fadeDown 1.2s ease;}
-.hero h2{margin-top:10px;font-size:28px;letter-spacing:6px;opacity:.9;animation:fadeUp 1.4s ease;}
-.hero p{margin-top:20px;font-size:18px;opacity:.75;animation:fadeUp 1.6s ease;}
-.btn{margin-top:30px;padding:15px 40px;border:2px solid #ffffff;color:#ffffff;text-decoration:none;font-weight:600;border-radius:50px;transition:.4s;animation:fadeUp 1.8s ease;}
-.btn:hover{background:#ffffff;color:#000;}
+.hero video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;opacity:0.5;transform:translateZ(0);}
+.hero h1{font-size:64px;letter-spacing:4px;color:#fff;text-shadow:0 0 15px #000;animation:fadeDown 1.2s ease;}
+.hero h2{margin-top:10px;font-size:28px;letter-spacing:6px;opacity:.9;color:gold;animation:fadeUp 1.4s ease;}
+.hero p{margin-top:20px;font-size:18px;opacity:.85;color:#fff;animation:fadeUp 1.6s ease;}
+.btn{margin-top:30px;padding:15px 45px;border:2px solid gold;color:gold;text-decoration:none;font-weight:700;border-radius:50px;transition:.4s;animation:fadeUp 1.8s ease;}
+.btn:hover{background:gold;color:#000;transform:scale(1.05);}
 
 /* ===== RÉSEAUX SOCIAUX ===== */
 .socials{margin-top:20px;display:flex;gap:20px;}
-.socials a{color:#fff;font-size:20px;text-decoration:none;transition:.3s;}
-.socials a:hover{color:gold;transform:scale(1.2);}
+.socials a{color:#fff;font-size:22px;text-decoration:none;transition:.3s;}
+.socials a:hover{color:gold;transform:scale(1.3);}
 
 /* ===== SECTIONS ===== */
-section{padding:100px 10%;opacity:0;transform:translateY(40px);transition:1s ease;}
+section{padding:100px 10%;opacity:0;transform:translateY(60px);transition:1s ease;}
 section.active{opacity:1;transform:translateY(0);}
-.section-title{font-size:42px;margin-bottom:20px;color:gold;}
+.section-title{font-size:46px;margin-bottom:20px;color:gold;text-transform:uppercase;}
 .section-text{font-size:18px;line-height:1.8;opacity:.85;}
 
 /* ===== CARDS ===== */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:40px;}
-.card{background:#121212;padding:30px;border-radius:20px;transition:.5s;overflow:hidden;position:relative;}
-.card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(255,215,0,.2);}
-.card img{width:100%;border-radius:50%;margin-bottom:15px;transition:.5s;}
-.card:hover img{transform:scale(1.05);}
-.card h3{margin-bottom:10px;color:gold;}
+.card{background:#121212;padding:30px;border-radius:25px;transition:.6s;overflow:hidden;position:relative;cursor:pointer;box-shadow:0 0 10px rgba(0,0,0,.3);}
+.card:hover{transform:translateY(-15px) scale(1.02);box-shadow:0 25px 50px rgba(255,215,0,.25);}
+.card img{width:100%;border-radius:50%;margin-bottom:15px;transition:.6s;box-shadow:0 0 15px rgba(255,215,0,.3);}
+.card:hover img{transform:scale(1.1) rotate(-1deg);box-shadow:0 0 30px gold;}
+.card h3{margin-bottom:10px;color:gold;letter-spacing:1px;transition:.4s;}
+.card p{opacity:.85;}
 
 /* ===== CONTACT ===== */
 .contact-form{display:flex;flex-direction:column;gap:15px;margin-top:20px;}
-.contact-form input,.contact-form textarea{padding:12px;border-radius:10px;border:none;font-size:16px;}
-.contact-form button{padding:15px;border-radius:50px;border:none;background:gold;color:#000;font-weight:600;cursor:pointer;transition:.3s;}
-.contact-form button:hover{background:#fff;color:#000;}
+.contact-form input,.contact-form textarea{padding:15px;border-radius:12px;border:none;font-size:16px;background:#1a1a1a;color:#fff;}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;box-shadow:0 0 10px gold;}
+.contact-form button{padding:15px;border-radius:50px;border:none;background:gold;color:#000;font-weight:700;cursor:pointer;transition:.3s;}
+.contact-form button:hover{background:#fff;color:#000;transform:scale(1.05);}
 
 /* ===== FOOTER ===== */
-footer{text-align:center;padding:40px;background:#000;opacity:.5;margin-top:50px;}
+footer{text-align:center;padding:40px;background:#000;opacity:.5;margin-top:50px;letter-spacing:1px;color:#fff;}
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeDown{from{opacity:0;transform:translateY(-40px)}to{opacity:1;transform:translateY(0)}}
@@ -74,18 +76,15 @@ footer{text-align:center;padding:40px;background:#000;opacity:.5;margin-top:50px
 
 <!-- HERO -->
 <div class="hero" id="hero">
-  <img src="hero.jpg" alt="CFT Hero" class="hero-image">
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <h1>Caen Football Training</h1>
-    <p>CFT – Formation • Performance • Discipline</p>
-    <a href="#seances" class="btn">Découvrir</a>
-  </div>
-</div>
-    <a href="https://instagram.com/caen_footballtraining" target="_blank">Instagram</a>
-    <a href="https://tiktok.com/@caenfootballtraining" target="_blank">TikTok</a>
-    <a href="https://facebook.com/CAEN-Football-training/61580620351305" target="_blank">Snapchat</a>
+  <video src="video/hero.mp4" autoplay muted loop></video>
+  <h1>Caen Football Training</h1>
+  <h2>CFT</h2>
+  <p>Association de futsal & football — Formation • Discipline • Performance</p>
+  <a href="#perfectionnement" class="btn">Découvrir</a>
+  <div class="socials">
+    <a href="https://instagram.com/cft" target="_blank">Instagram</a>
+    <a href="https://tiktok.com/@cft" target="_blank">TikTok</a>
+    <a href="https://snapchat.com/add/cft" target="_blank">Snapchat</a>
   </div>
 </div>
 
@@ -150,7 +149,15 @@ const observer = new IntersectionObserver(entries=>{
   });
 },{threshold:0.1});
 sections.forEach(section=>observer.observe(section));
+
+// ===== PARALLAX HERO =====
+const hero = document.querySelector('.hero');
+window.addEventListener('scroll', () => {
+  let offset = window.pageYOffset;
+  hero.style.transform = `translateY(${offset * 0.2}px)`;
+});
 </script>
 
 </body>
 </html>
+
